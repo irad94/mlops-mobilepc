@@ -12,6 +12,7 @@ black==21.7b0
 bleach==6.0.0
 bump2version==0.5.11
 certifi==2023.7.22
+cfgv==3.4.0
 chardet==5.2.0
 charset-normalizer==3.2.0
 click==8.1.6
@@ -33,6 +34,7 @@ filelock==3.12.2
 flake8==3.7.8
 fonttools==4.42.0
 h11==0.14.0
+identify==2.5.26
 idna==3.4
 imagesize==1.4.1
 iniconfig==2.0.0
@@ -52,6 +54,7 @@ mccabe==0.6.1
 mdurl==0.1.2
 mypy-extensions==1.0.0
 nest-asyncio==1.5.7
+nodeenv==1.8.0
 numpy==1.25.2
 packaging==23.1
 pandas==2.0.3
@@ -64,6 +67,7 @@ pkginfo==1.9.6
 platformdirs==3.10.0
 plotly==5.16.0
 pluggy==0.13.1
+pre-commit==3.3.3
 prompt-toolkit==3.0.39
 psutil==5.9.5
 pure-eval==0.2.2
