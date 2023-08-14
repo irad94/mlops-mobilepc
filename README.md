@@ -66,7 +66,7 @@ You can find the data needed for this proyecto in [Kaggle public repository](htt
 
 ## Pytest (Unit test)
 
-You can reproduce the unit test through the [test module](mobilepc/test), following the next steps:
+You can reproduce the unit test through the [test module](mobilepc/tests), following the next steps:
 
 ### Virtual environment
 
@@ -208,11 +208,7 @@ Try running the following predictions with the endpoint by writing the following
   The output will be:
 
   ```
-  "Predicted Price Range: [2]"
-  ```
-
-  ```bash
-  sultado predicción: [1]
+  "Predicted Price Range: [1]"
   ```
 
 ### Training model
