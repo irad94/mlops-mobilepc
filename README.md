@@ -20,6 +20,12 @@ The primary purpose of this model is to showcase all the necessary components th
 
 You can find the data needed for this proyecto in [Kaggle public repository](https://www.kaggle.com/datasets/iabhishekofficial/mobile-price-classification).
 
+
+## Overall analysis and results
+
+If you want to see with detail what kind of analysis and results we get in order to build a solutions around a SVM model, you can check out [this proyect notebook](mobilepc/docs/mobile-price-prediction-0-983.ipynb), where you cand find all the stages of a Machine Learning model selection.
+
+
 ## Setup
 
 ### For Linux users:
