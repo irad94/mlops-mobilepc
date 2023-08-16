@@ -1,6 +1,6 @@
 # mlops-mobilepc
 
-Repository for Mobile Price Clasiffication proyect.
+Irad's repository for Mobile Price Clasiffication proyect.
 
 ## Problem context:
 
