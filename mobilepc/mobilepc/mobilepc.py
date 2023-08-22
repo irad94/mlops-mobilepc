@@ -1,16 +1,20 @@
 """Main module."""
 
+import os
+
 import joblib
 import pandas as pd
 from sklearn.metrics import accuracy_score, precision_score
 from sklearn.model_selection import train_test_split
 from train.train_data import MobilePricePipeline
 
-DATASETS_DIR = 'C:/Users/IOR_C/OneDrive/Documentos/GitHub/mlops-mobilepc/mobilepc/mobilepc/data/'
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+PARENT_DIR = os.path.abspath(os.path.join(CURRENT_DIR, ".."))
+DATASETS_DIR = os.path.abspath(os.path.join(CURRENT_DIR, "data"))
 
 SEED_SPLIT = 42
-TRAIN_DATA_FILE = DATASETS_DIR + 'train.csv'
-TEST_DATA_FILE = DATASETS_DIR + 'test.csv'
+TRAIN_DATA_FILE = DATASETS_DIR + '\\train.csv'
+TEST_DATA_FILE = DATASETS_DIR + '\\test.csv'
 
 
 TARGET = 'price_range'
@@ -26,9 +30,9 @@ CATEGORICAL_VARS_OH = ['n_cores']
 
 SEED_MODEL = 404
 
-TRAINED_MODEL_DIR = 'C:/Users/IOR_C/OneDrive/Documentos/GitHub/mlops-mobilepc/mobilepc/mobilepc/models/'
+TRAINED_MODEL_DIR = os.path.abspath(os.path.join(CURRENT_DIR, "models"))
 PIPELINE_NAME = 'SVM'
-PIPELINE_SAVE_FILE = f'{PIPELINE_NAME}_output.pkl'
+PIPELINE_SAVE_FILE = f'\\{PIPELINE_NAME}_output.pkl'
 DROPCOL = ['ID']
 
 
