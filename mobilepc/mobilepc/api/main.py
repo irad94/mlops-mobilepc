@@ -1,6 +1,5 @@
 import os
 import subprocess
-import sys
 
 import pandas as pd
 from fastapi import FastAPI, HTTPException, status
@@ -9,11 +8,18 @@ from starlette.responses import JSONResponse
 
 from .models.models import Mobile
 
-# Add the parent directory to sys.path
-current_dir = os.path.dirname(os.path.abspath(__file__))
-parent_dir = os.path.abspath(os.path.join(current_dir, ".."))
-sys.path.append(parent_dir)
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+PARENT_DIR = os.path.abspath(os.path.join(CURRENT_DIR, ".."))
+GRANDPARENT_DIR = os.path.abspath(os.path.join(PARENT_DIR, ".."))
+ROOT_DIR = os.path.abspath(os.path.join(GRANDPARENT_DIR, ".."))
+DATASETS_DIR = os.path.abspath(os.path.join(CURRENT_DIR, "data"))
 
+PIPELINE_NAME = 'SVM'
+PIPELINE_SAVE_FILE = PARENT_DIR + f'\\models\\{PIPELINE_NAME}_output.pkl'
+
+TRAIN_MAIN_DIR = PARENT_DIR + '\\mobilepc.py'
+
+PYTHON_DIR = ROOT_DIR + '\\venv\\Scripts\\python'
 
 app = FastAPI()
 
@@ -26,8 +32,7 @@ async def healthcheck():
 @app.post('/predict')
 def extract_name(mobile_features: Mobile):
     try:
-        predictor = ModelPredictor(
-            "C:/Users/IOR_C/OneDrive/Documentos/GitHub/mlops-mobilepc/mobilepc/mobilepc/models/SVM_output.pkl")
+        predictor = ModelPredictor(PIPELINE_SAVE_FILE)
         X = {'battery_power': [mobile_features.battery_power],
              'blue': [mobile_features.blue],
              'clock_speed': [mobile_features.clock_speed],
@@ -69,8 +74,7 @@ def extract_name(mobile_features: Mobile):
 async def train_model():
     try:
         result = subprocess.run(
-            ["C:/Users/IOR_C/OneDrive/Documentos/GitHub/mlops-mobilepc/venv/Scripts/python",
-             "C:/Users/IOR_C/OneDrive/Documentos/GitHub/mlops-mobilepc/mobilepc/mobilepc/mobilepc.py"],
+            [PYTHON_DIR, TRAIN_MAIN_DIR],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             text=True,
