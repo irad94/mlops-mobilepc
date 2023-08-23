@@ -418,7 +418,7 @@ If everything is ok, it will reponse back with a `message` and a `reponse_text` 
 * Delete the image
 
   ```bash
-  docker rmi titanic-image
+  docker rmi mobilepc-image
   ```
 
   Output:
