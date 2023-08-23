@@ -632,7 +632,7 @@ Open a new terminal, and execute the following commands:
    docker rmi mobilepc-app
    ```
 
-    Output:
+   Output:
 
 ```bash
 Untagged: mobilepc-frontend:latest
@@ -641,7 +641,6 @@ Deleted: sha256:cad7ed656a014cb6656ad8749b203ea216be903cc4e051af3cdc3997b7ecf2c0
 Untagged: mobilepc-app:latest
 Deleted: sha256:fa054a5b48a475eb0589950d42d5323b4e43607f89e4b006bbd1a33e472e364b
 ```
-
 
 ## Pre-commits
 
@@ -698,11 +697,9 @@ git commit -m "add pre-commit file"
 
 Output
 
-<details open>
-    <summary>Pre-commit output, click to collapse</summary>
+`<summary>`Pre-commit output, click to collapse `</summary>`
 
     ``bash     [WARNING] The 'rev' field of repo 'https://github.com/pre-commit/mirrors-autopep8' appears to be a mutable reference (moving tag / branch).  Mutable references are never updated after first install and are not supported.  See https://pre-commit.com/#using-the-latest-version-for-a-repository for more details.  Hint: `pre-commit autoupdate` often fixes this.     [INFO] Initializing environment for https://github.com/pre-commit/mirrors-autopep8.     [INFO] Initializing environment for https://github.com/PyCQA/flake8.     [INFO] Installing environment for https://github.com/pre-commit/mirrors-autopep8.     [INFO] Once installed this environment will be reused.     [INFO] This may take a few minutes...     [INFO] Installing environment for https://github.com/PyCQA/flake8.     [INFO] Once installed this environment will be reused.     [INFO] This may take a few minutes...     autopep8.............................................(no files to check)Skipped     flake8...............................................(no files to check)Skipped     [main 210cf52] add pre-commit file     3 files changed, 77 insertions(+)     create mode 100644 .pre-commit-config.yaml     create mode 100644 module-2/session-5/README.md     ``
-    `</details>`
 
 Pre-commit will run all the defined hooks on the files you've staged for the commit. If any issues are found (e.g., trailing whitespace, linting errors, etc.), the commit will be halted, and you'll need to address the problems before you can successfully commit.
 
