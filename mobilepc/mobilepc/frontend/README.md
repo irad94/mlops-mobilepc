@@ -4,4 +4,4 @@ This REST API - Frontend is a frontend API and works as a load-balancer to serve
 
 In this case, it is only connected to the Server (app) API.
 
-If you want to deploy it, follow the [Complete deployment of all containers with Docker Compose and usage](../../../README.md###complete-deployment-of-all-containers-with-docker-compose-and-usage) instructions.
+If you want to deploy it, follow the [Complete deployment of all containers with Docker Compose and usage](../../../README.md#Complete-deployment-of-all-containers-with-Docker-Compose-and-usage) instructions.
