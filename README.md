@@ -36,7 +36,7 @@ If you want to see with detail what kind of analysis and results we get in order
 * Install the other libraries
   Run the following command to install the libraries/packages.
   ```bash
-  pip install -r ./mlops-mobilepc/mobilepc/requirements_dev.txt
+  py -m pip install -r ./mlops-mobilepc/mobilepc/requirements_dev.txt
   ```
 
 ### For Windows users:
