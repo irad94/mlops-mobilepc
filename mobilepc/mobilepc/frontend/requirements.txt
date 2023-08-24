@@ -31,7 +31,6 @@ exceptiongroup==1.1.2
 executing==1.2.0
 fastapi==0.101.0
 filelock==3.12.2
-flake8==3.7.8
 fonttools==4.42.0
 h11==0.14.0
 identify==2.5.26
