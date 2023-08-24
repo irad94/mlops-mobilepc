@@ -246,7 +246,7 @@ If everything is ok, it will reponse back with a `message` and a `reponse_text` 
 
 #### Run Mobile PC REST API
 
-1. Run the next command to start the `titanic-image` image in a container.
+1. Run the next command to start the `mobilepc-image` image in a container.
 
    ```bash
    docker run -d --rm --name mobilepc-c -p 8000:8000 mobilepc-image
@@ -266,7 +266,7 @@ If everything is ok, it will reponse back with a `message` and a `reponse_text` 
 
 #### Checking endpoints for app
 
-1. Access `http://127.0.0.1:8000/`, and you will see a message like this `"Titanic classifier is all ready to go!"`
+1. Access `http://127.0.0.1:8000/`, and you will see a message like this `"Mobile classifier is all ready to go!"`
 2. A file called `main_api.log` will be created automatically inside the container. We will inspect it below.
 3. Access `http://127.0.0.1:8000/docs`, the browser will display something like this:
 
@@ -709,7 +709,7 @@ Here you will find information about this project and more.
 
 ### Information sources
 
-* You can find the data needed for this proyecto in [Kaggle public repository](https://www.kaggle.com/datasets/iabhishekofficial/mobile-price-classification).
+* You can find the data needed for this proyect in [Kaggle public repository](https://www.kaggle.com/datasets/iabhishekofficial/mobile-price-classification).
 
 ## Contact information
 
